@@ -1,13 +1,120 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* 
+FONTS
+*/
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;800&family=Open+Sans:wght@300;600;800&display=swap');
+
+/* 
+VARIABLES
+*/
+:root {
+  --clr-purple: #7c5dfa;
+  --clr-heliotrope: #9277ff;
+  --clr-mirage: #1e2139;
+  --clr-ebony: #252945;
+  --clr-selago: #dfe3fa;
+  --clr-baliHai: #888eb0;
+  --clr-shipCove: #7e88c3;
+  --clr-vulcan: #0c0e16;
+  --clr-burntSienna: #ec5757;
+  --clr-monaLisa: #ff9797;
+  --clr-whisper: #f8f8fb;
+  --clr-offWhite: #f9fafe;
+  --clr-mirage2: #141625;
+  --clr-darkAccent: #494e6e;
+  --clr-orange: #ff8f00;
+  --clr-fadedOrange: rgba(255, 143, 0, 0.0571);
+  --clr-otherDark: #373b53;
+  --clr-tablet: 768px;
+  --clr-desktop: 1440px;
+  --primary-font: 'Roboto', sans-serif;
+  --secondary-font: 'Shizuru', cursive;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* .dark-theme {
+  --clr-bg: #1e2139;
+  --clr-elements: #282d4d;
+  --clr-text-primary: hsl(0, 0%, 100%);
+  --clr-text-secondary: hsl(0, 0%, 52%);
 }
+
+.light-theme {
+  --clr-bg: hsl(0, 0%, 98%);
+  --clr-elements: #fff;
+  --clr-text-primary: hsl(200, 15%, 8%);
+  --clr-text-secondary: hsl(0, 0%, 52%);
+} */
+
+body {
+  background-color: var(--clr-bg);
+  color: var(--clr-text-primary);
+  font-family: 'Open Sans';
+}
+
+/* 
+RESET
+*/
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*
+GLOBAL STYLES
+*/
+
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+@media screen and(min-width:800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+}
+ul {
+  list-style: none;
+}
+img {
+  width: 100%;
+  display: block;
+}
+a {
+  text-decoration: none;
+}
+
+/* BTN CLASSES */
+.btn {
+  text-transform: uppercase;
+  color: var(--clr-text-primary);
+  text-decoration: none;
+  padding: 0.375rem 0.775rem;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  letter-spacing: 0.1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+/* IMPLEMENT DARK MODE */

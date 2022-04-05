@@ -1,0 +1,13 @@
+@import './variables.scss';
+.notes {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1100px;
+  .addMore {
+    justify-content: center;
+    gap: 1rem;
+    font-size: 1.5rem;
+    align-items: center;
+    color: $clr-purple;
+  }
+}
