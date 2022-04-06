@@ -1,0 +1,33 @@
+@import './variables.scss';
+.note-form-container {
+  margin: 1rem auto;
+  color: white;
+
+  .form-action {
+    margin: 1rem 0;
+  }
+  .form-input {
+    display: inline-block;
+    width: 100%;
+    appearance: none;
+    border: none;
+    outline: none;
+    height: 2.5rem;
+    border-radius: 10px;
+    margin-top: 0.75rem;
+    background-color: $clr-shipCove;
+    padding: 1rem;
+  }
+  textarea {
+    height: 10rem;
+    background-color: $clr-shipCove;
+    appearance: none;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    margin-top: 0.75rem;
+    display: inline-block;
+    width: 100%;
+    padding: 1rem;
+  }
+}

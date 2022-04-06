@@ -4,7 +4,7 @@ export const initialState = {
     title: '',
     detail: '',
     createdAt: '',
-    importancy: null,
+    importancy: '',
     visibility: null,
   },
   notes: notes,
