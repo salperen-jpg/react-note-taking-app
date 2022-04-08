@@ -1,0 +1,27 @@
+@import './variables.scss';
+
+.error {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    img {
+      width: 40rem;
+    }
+    .error-btn {
+      background: $clr-shipCove;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+    }
+    .error-btn:hover {
+      background: rgba(0, 0, 0, 0.9);
+    }
+  }
+}

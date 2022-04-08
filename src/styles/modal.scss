@@ -11,6 +11,8 @@
 
   .btn-container {
     text-align: right;
+    max-width: 600px;
+    margin: 1rem 0;
   }
   .modal-close {
     color: red;
@@ -26,3 +28,9 @@
 .show {
   transform: translate(0);
 }
+
+// @media screen and (min-width: 768px) {
+//   .modal {
+//     max-width: 600px;
+//   }
+// }

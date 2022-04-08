@@ -6,6 +6,9 @@
   .form-action {
     margin: 1rem 0;
   }
+  label {
+    display: block;
+  }
   .form-input {
     display: inline-block;
     width: 100%;
@@ -17,6 +20,9 @@
     margin-top: 0.75rem;
     background-color: $clr-shipCove;
     padding: 1rem;
+    color: $clr-offWhite;
+    font-size: 1.1rem;
+    letter-spacing: 0.1rem;
   }
   textarea {
     height: 10rem;
@@ -29,5 +35,50 @@
     display: inline-block;
     width: 100%;
     padding: 1rem;
+    color: $clr-offWhite;
+    font-size: 1.1rem;
+    letter-spacing: 0.1rem;
+  }
+  input[type='date'] {
+    height: 3rem;
+  }
+  select {
+    margin-top: 0.75rem;
+    height: 2rem;
+    background: $clr-shipCove;
+    border: none;
+    outline: none;
+
+    color: white;
+    padding: 0.5rem;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+  }
+  option {
+    border-radius: 10px;
+    border: none;
+    appearance: none;
+    outline: none;
+  }
+
+  .form-btn-container {
+    margin-top: 1rem;
+    text-align: right;
+
+    .submit-btn {
+      background: $clr-darkAccent;
+      margin-left: 0.5rem;
+      border-radius: 10px;
+    }
+    .cancel-btn {
+      background: $clr-monaLisa;
+      border-radius: 10px;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .note-form-container {
+    max-width: 600px;
+    margin: 1rem 0;
   }
 }

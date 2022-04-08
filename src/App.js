@@ -1,13 +1,18 @@
 import './App.css';
 import { useGlobalContext } from './context';
-import { Home } from './pages';
+import { Home, SingleNote, Error } from './pages';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './styles/main.scss';
 
 function App() {
   return (
-    <>
-      <Home />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />}></Route>
+        <Route path='/notes/:id' element={<SingleNote />}></Route>
+        <Route path='*' element={<Error />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

@@ -6,12 +6,14 @@ const NoteForm = () => {
   const {
     note: { title, detail, createdAt, importancy, visibility },
     handleChange,
+    closeModal,
+    handleSubmit,
   } = useGlobalContext();
   return (
     <section className='note-form-container'>
       <h3>New Note</h3>
 
-      <form className='note-form'>
+      <form className='note-form' onSubmit={handleSubmit}>
         {/* TITLE */}
         <div className='form-action'>
           <label>Title</label>
@@ -50,13 +52,34 @@ const NoteForm = () => {
           <label>Created At</label>
           <input
             type='date'
-            value={detail}
-            name='detail'
+            value={createdAt}
+            name='createdAt'
             onChange={handleChange}
             className='form-input'
           />
         </div>
         {/* VISIBILITY */}
+        <div className='form-action'>
+          <label htmlFor='select'>Visibility</label>
+          <select
+            name='visibility'
+            id='visibility'
+            value={visibility}
+            className='select'
+            onChange={handleChange}
+          >
+            <option value='public'>Public</option>
+            <option value='private'>Private</option>
+          </select>
+        </div>
+        <div className='form-btn-container'>
+          <button type='button' className='btn cancel-btn' onClick={closeModal}>
+            Cancel
+          </button>
+          <button type='submit' className='btn submit-btn'>
+            Submit
+          </button>
+        </div>
       </form>
     </section>
   );
